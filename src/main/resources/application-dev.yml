@@ -1,0 +1,44 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/human_resource_db
+    username: username
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  mail:
+    host: localhost
+    port: 1025
+    username: ulrich
+    password: ulrich
+    properties:
+      mail:
+        smtp:
+          trust: "*"
+        auth: true
+        starttls:
+          enabled: true
+        connectiontimeout: 5000
+        timeout: 3000
+        writetimeout: 5000
+
+application:
+  security:
+    jwt:
+      secret-key: a18d22039f26b9e13886f354dfd043dc54f6c50e1c6d5c6839e0e376c7a0720df9623a6440ee55c133bdc8a6ca23a6da315bd546eb9c9cf50b699bd26e6be3e5e05967f2a23de66f5ef9685c5ad3edd1c01ed25389244db0e4cd43e2e0e4bae3abd7080f89d340533798679042c4311982d5c1bb3c975c611431c6fba6ba214ca146624ca570b777ab8442b3ba238360b6b6a075e7c52a3943ace1ff0d26d81122c58dbdc277c1e6e929a95a4ac2c88fa74d3ff92b5d84a1648ff75d830c8eb51ed1ac5ec6852c1e30932bf01550470a3b54c98ce9ff67d16857a288def58498f3be552c3d0731cc474ed9a76cdb71bbb991e2913a515932ad132ecfa4e13f0c
+      expiration: 8640000
+  mailing:
+    frontend:
+      activate-url: http://localhost:4200/update_confirmation
+    file:
+      upload:
+        photos-output-path: ./uploads
+server:
+  port: 8088
