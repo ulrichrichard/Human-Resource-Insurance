@@ -61,7 +61,7 @@ This project consists of developing an **HR management system** that allows **HR
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/hr-beneficiary-management.git
+   git clone https://github.com/ulrichrichard/Human-Resource-Insurance.git
    ```
 2. Open in IntelliJ.
 3. Add the docker-compose.yml file on the root folder then tap this command on terminal: docker-compose up
